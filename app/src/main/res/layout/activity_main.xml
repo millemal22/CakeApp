@@ -44,7 +44,16 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOORAY!!" />
+            android:text="Blow Out Candles" />
+
+        <Switch
+            android:id="@+id/Candles"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="left|center_vertical"
+            android:text="Candles"
+            android:textSize="16sp" />
 
         <Switch
             android:id="@+id/Frosting"
@@ -59,7 +68,18 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="yay..." />
+            android:text="Goodbye" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/Candles2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How Many Candles?" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
