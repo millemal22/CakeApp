@@ -13,9 +13,10 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|left"
+            android:layout_gravity="top"
+            android:gravity="center"
             android:text="Happy Birthday"
             android:textColor="#FF9800"
             android:textSize="48sp" />
@@ -32,42 +33,49 @@
         <!--        CakeView is a custom SurfaceView that is defined in the app's source code -->
         <cs301.birthdaycake.CakeView
             android:id="@+id/cakeview"
-            android:layout_width="976dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
             android:layout_weight="5"
             android:visibility="visible" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:gravity="bottom|left">
+        android:gravity="bottom|right">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/Candles2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_weight="0"
                 android:gravity="bottom"
-                android:text="How Many Candles?" />
+                android:text="  How Many Candles?" />
 
             <SeekBar
                 android:id="@+id/seekBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom" />
+                android:layout_gravity="bottom"
+                android:max="5"
+                android:progress="2" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:gravity="bottom"
             android:orientation="vertical">
 
@@ -76,6 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
+                android:checked="true"
                 android:gravity="left|center_vertical"
                 android:minHeight="48dp"
                 android:text="Frosting"
@@ -86,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
+                android:checked="true"
                 android:gravity="left|center_vertical"
                 android:minHeight="48dp"
                 android:text="Candles"
@@ -96,7 +106,10 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom|left"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0"
+            android:gravity="bottom|right"
             android:orientation="vertical">
 
             <Button
@@ -109,6 +122,7 @@
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="goodbye"
                 android:text="Goodbye" />
         </LinearLayout>
 
