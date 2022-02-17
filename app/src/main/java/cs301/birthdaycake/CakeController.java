@@ -18,6 +18,7 @@ public class CakeController implements View.OnClickListener, CompoundButton.OnCh
         cm = cv.getCakeModel();
         newCakeView = cv;
 
+
     }
 
     public void onClick(View v) {
@@ -33,14 +34,18 @@ public class CakeController implements View.OnClickListener, CompoundButton.OnCh
     }
 
     @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+    public void onCheckedChanged(CompoundButton cb, boolean b) {
+        CharSequence name = cb.getText();
+        CharSequence c = "Candles";
+        CharSequence f = "Frosting";
         System.out.println("candles");
-        //if (compoundButton.getText()== "Candles") {
+
+        if (name.equals(c)) {
             cm.candles = !cm.candles;
-        //}
-        //else if (compoundButton.getText() == "Frosting"){
-        //    cm.frosting = !cm.frosting;
-        //}
+        }
+        else if (name.equals(f)) {
+            cm.frosting = !cm.frosting;
+        }
         this.newCakeView.invalidate();
     }
 
